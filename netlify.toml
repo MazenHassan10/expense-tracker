@@ -1,0 +1,8 @@
+[build]
+  functions = "server/netlify/functions"   # Path to the functions directory
+  publish = "frontend/dist"                 # Path to the build output of your frontend
+
+[[redirects]]
+  from = "/api/*"                          # Redirect API requests to your function
+  to = "/.netlify/functions/app"           # Point to the function handler
+  status = 200
